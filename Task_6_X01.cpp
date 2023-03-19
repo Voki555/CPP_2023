@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 bool queen_hit(string f, string p){
     int f1 = f[0],p1 = p[0],f2 = f[1], p2 = p[1];
-    if(f1<96 || f1>105 || f2<=48 || f2>=57 || p1<96 || p1>105 || p2<=48 || p2>=57 || f1 == p1 & f[1] == p[1]){
+    if(f.length() != 2 || p.length() != 2 || f1<96 || f1>105 || f2<=48 || f2>=57 || p1<96 || p1>105 || p2<=48 || p2>=57 || f1 == p1 & f[1] == p[1]){
         cout << "Error, " << 0;
         return false;
     }
